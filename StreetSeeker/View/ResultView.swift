@@ -21,7 +21,8 @@ struct ResultView: View {
     var walkDistance: Int
     var result: Bool
     
-//    let context = try ModelContext(for: SeekData.self, storageType: .file)
+    
+    let context = try! ModelContext(for: SeekData.self, storageType: .file)
     
     var body: some View {
         let screenWidth = UIScreen.main.bounds.width
@@ -53,20 +54,9 @@ struct ResultView: View {
                             }
                         }
                     
-                    Text("タイム: \(time)")
-                        .foregroundStyle(.white)
-                        .font(.largeTitle)
-                        .fontWeight(.bold)
-                    
-                    Text("歩数: \(steps)")
-                        .foregroundStyle(.white)
-                        .font(.largeTitle)
-                        .fontWeight(.bold)
-                    
-                    Text("距離: \(walkDistance)m")
-                        .foregroundStyle(.white)
-                        .font(.largeTitle)
-                        .fontWeight(.bold)
+                    dataText(text: "タイム: \(time)")
+                    dataText(text: "歩数: \(steps)")
+                    dataText(text: "距離: \(walkDistance)m")
                         .padding(.bottom, 10)
                     
                     
@@ -91,7 +81,7 @@ struct ResultView: View {
                 
             }
             .onAppear() {
-                
+                save()
             }
             .task {
                 position = .camera(MapCamera(centerCoordinate: location, distance: 150))
@@ -133,6 +123,25 @@ struct ResultView: View {
             
         }
 
+    }
+    
+    func save() {
+        let item = SeekData(latitude: location.latitude, longitude: location.longitude, time: time, distance: walkDistance, steps: steps, date: Date())
+        context.insert(item)
+        do {
+            try context.save()
+        } catch {
+            print("error save")
+        }
+        let fetchDescriptor = FetchDescriptor<SeekData>()
+        print(item.steps)
+    }
+    
+    func dataText(text: String) -> some View {
+        Text(text)
+            .foregroundStyle(.white)
+            .font(.largeTitle)
+            .fontWeight(.bold)
     }
 
         

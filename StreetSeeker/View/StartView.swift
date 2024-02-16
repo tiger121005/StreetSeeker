@@ -75,18 +75,22 @@ struct StartView: View {
                     
                                         
                         
-                    
-                    Button(action: {
-                        navigationPath.append(pathManager.setting)
-                    }, label: {
+                    NavigationLink(destination: ProfileView()) {
                         Text("プロフィール")
                             .frame(width: screenWidth / 1.5, height: 90)
                             .font(.title)
-                    })
-//                    NavigationLink("始める", value: pathManager.setting)
-                    .navigationDestination(for: pathManager.self) {_ in
-                        ProfileView()
                     }
+//                    Button(action: {
+//                        navigationPath.append(pathManager.profile)
+//                    }, label: {
+//                        Text("プロフィール")
+//                            .frame(width: screenWidth / 1.5, height: 90)
+//                            .font(.title)
+//                    })
+////                    NavigationLink("始める", value: pathManager.setting)
+//                    .navigationDestination(for: pathManager.self) {_ in
+//                        ProfileView()
+//                    }
                     .foregroundColor(.black)
                     .background(.image)
                     .cornerRadius(15)
@@ -138,6 +142,7 @@ struct StartView: View {
     
     enum pathManager: String {
         case setting
+        case profile
     }
 }
 

@@ -3,4 +3,117 @@
    uuid = "D6AFA65F-C89F-4758-A281-E82DEC345C85"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5D189FF1-6244-45DC-8B45-D7119ECE2203"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StreetSeeker/View/ProfileView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "5D189FF1-6244-45DC-8B45-D7119ECE2203 - e8bdaf84de3696e3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; () in StreetSeeker.ProfileView.body.getter : some"
+                  moduleName = "StreetSeeker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tiger/Desktop/StreetSeeker/StreetSeeker/View/ProfileView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "1156">
+               </Location>
+               <Location
+                  uuid = "5D189FF1-6244-45DC-8B45-D7119ECE2203 - e8bdaf84de3696e3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; () in StreetSeeker.ProfileView.body.getter : some"
+                  moduleName = "StreetSeeker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tiger/Desktop/StreetSeeker/StreetSeeker/View/ProfileView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "828">
+               </Location>
+               <Location
+                  uuid = "5D189FF1-6244-45DC-8B45-D7119ECE2203 - e8bdaf84de3696e3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; () in StreetSeeker.ProfileView.body.getter : some"
+                  moduleName = "StreetSeeker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tiger/Desktop/StreetSeeker/StreetSeeker/View/ProfileView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "1428">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6C0CA962-8C10-4B4F-9F90-B26901AF23DE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StreetSeeker/View/ProfileView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "6C0CA962-8C10-4B4F-9F90-B26901AF23DE - ae4c44d2759ac6c5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "StreetSeeker.ProfileView.body.getter : some"
+                  moduleName = "StreetSeeker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tiger/Desktop/StreetSeeker/StreetSeeker/View/ProfileView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "1264">
+               </Location>
+               <Location
+                  uuid = "6C0CA962-8C10-4B4F-9F90-B26901AF23DE - e8bdaf84de36968c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; () in StreetSeeker.ProfileView.body.getter : some"
+                  moduleName = "StreetSeeker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tiger/Desktop/StreetSeeker/StreetSeeker/View/ProfileView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "1884">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

@@ -12,18 +12,18 @@ import SwiftData
 final class SeekData {
     var latitude: Double
     var longitude: Double
-    var image: Data
     var time: String
-    var distance: Double
+    var distance: Int
     var steps: Int
+    var date: Date
     
-    init(latitude: Double, longitude: Double, image: Data, time: String, distance: Double, steps: Int) {
+    init(latitude: Double, longitude: Double, time: String, distance: Int, steps: Int, date: Date) {
         self.latitude = latitude
         self.longitude = longitude
-        self.image = image
         self.time = time
         self.distance = distance
         self.steps = steps
+        self.date = date
         
     }
 }

@@ -287,14 +287,13 @@ struct SeekView: View {
             if right > currentLocation.longitude && left < currentLocation.longitude {
                 timerStop()
                 pedometer.stopUpdates()
-                steps = 0
                 return true
             } else {
                 return false
             }
         } else {
+            timerStop()
             pedometer.stopUpdates()
-            steps = 0
             return true
         }
     }
