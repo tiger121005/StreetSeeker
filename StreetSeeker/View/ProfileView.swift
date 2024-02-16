@@ -66,5 +66,5 @@ struct ProfileView: View {
 
 #Preview {
     ProfileView()
-//        .modelContainer(for: SeekData, inMemory: true)
+        .modelContainer(for: SeekData, inMemory: true)
 }
