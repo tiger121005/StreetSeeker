@@ -170,9 +170,9 @@ struct SeekView: View {
             if viewDidLoad {
                 steps = 0
                 startCountStep()
-                if let timeManager {
-                    timerStop()
-                }
+//                if let timeManager {
+//                    timerStop()
+//                }
                 timer = "00:00:00"
                 second = 0
                 minute = 0

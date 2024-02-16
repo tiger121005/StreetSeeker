@@ -21,7 +21,7 @@ struct ResultView: View {
     var walkDistance: Int
     var result: Bool
     
-    let context = try ModelContext(for: SeekData.self, storageType: .file)
+//    let context = try ModelContext(for: SeekData.self, storageType: .file)
     
     var body: some View {
         let screenWidth = UIScreen.main.bounds.width
