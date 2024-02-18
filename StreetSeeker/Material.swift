@@ -20,9 +20,11 @@ class Material {
 }
 
 
-extension Color {
+extension UIImage {
     
-    
+    static var pencil: UIImage {
+        return UIImage(systemName: "pencil")!
+    }
 }
 
 extension CLLocationCoordinate2D {

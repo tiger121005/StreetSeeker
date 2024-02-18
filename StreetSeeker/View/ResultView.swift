@@ -13,16 +13,18 @@ struct ResultView: View {
     
     @Binding var navigationPath: NavigationPath
     
+    @Query private var seekData: [SeekData]
+    
     @State private var position: MapCameraPosition = .automatic
     
     var location: CLLocationCoordinate2D
-    var time: String
+    var time: Int
     var steps: Int
     var walkDistance: Int
     var result: Bool
     
     
-    let context = try! ModelContext(for: SeekData.self, storageType: .file)
+    @Environment(\.modelContext) private var modelContext
     
     var body: some View {
         let screenWidth = UIScreen.main.bounds.width
@@ -54,7 +56,7 @@ struct ResultView: View {
                             }
                         }
                     
-                    dataText(text: "タイム: \(time)")
+                    dataText(text: "タイム: \(manager.tranceSecond(second: time))")
                     dataText(text: "歩数: \(steps)")
                     dataText(text: "距離: \(walkDistance)m")
                         .padding(.bottom, 10)
@@ -82,6 +84,7 @@ struct ResultView: View {
             }
             .onAppear() {
                 save()
+                
             }
             .task {
                 position = .camera(MapCamera(centerCoordinate: location, distance: 150))
@@ -126,15 +129,18 @@ struct ResultView: View {
     }
     
     func save() {
-        let item = SeekData(latitude: location.latitude, longitude: location.longitude, time: time, distance: walkDistance, steps: steps, date: Date())
-        context.insert(item)
+        let item = SeekData(latitude: location.latitude,
+                            longitude: location.longitude,
+                            time: time,
+                            distance: walkDistance,
+                            steps: steps,
+                            date: Date())
+        modelContext.insert(item)
         do {
-            try context.save()
+            try modelContext.save()
         } catch {
-            print("error save")
+            print("Error save")
         }
-        let fetchDescriptor = FetchDescriptor<SeekData>()
-        print(item.steps)
     }
     
     func dataText(text: String) -> some View {
@@ -148,7 +154,7 @@ struct ResultView: View {
 }
 
 #Preview {
-    ResultView(navigationPath: .constant(NavigationPath.init()), location: .defaultLocation, time: "00:00:00", steps: 11000, walkDistance: 1000, result: true)
+    ResultView(navigationPath: .constant(NavigationPath.init()), location: .defaultLocation, time: 9473, steps: 11000, walkDistance: 1000, result: true)
 //        .modelContainer(for: SeekData.self, inMemory: true)
 }
 

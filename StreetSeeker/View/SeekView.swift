@@ -23,9 +23,7 @@ struct SeekView: View {
     @State private var mapPitch: Double = 0.0
     @State private var animationTrigger: Bool = false
     @State private var timer: String = "00:00:00"
-    @State private var hour: Int = 0
-    @State private var minute: Int = 0
-    @State private var second: Int = 0
+    @State private var secondTimer: Int = 0
     @State private var runTimer: Bool = true
     @State private var viewDidLoad = true
     @State private var showAlert: Bool = false
@@ -54,12 +52,7 @@ struct SeekView: View {
                     .font(.system(size: 65, weight: .black))
                     .fontWidth(.compressed)
                     .frame(height: 55)
-//                    .padding(.top, 30)
-    //                .navigationTitle("探す")
-    //                .navigationBarTitleDisplayMode(.inline)
-    //                .toolbarBackground(.image, for: .navigationBar)
-    //                .toolbarBackground(.visible, for: .navigationBar)
-    //                .toolbarColorScheme(.light, for: .navigationBar)
+                
                     .toolbar(.hidden, for: .navigationBar)
                     .navigationBarBackButtonHidden()
                 
@@ -138,7 +131,7 @@ struct SeekView: View {
                 
             })
             .navigationDestination(for: pathManager.self) {_ in
-                ResultView(navigationPath: $navigationPath, location: searchLocation, time: timer, steps: steps, walkDistance: Int(round(walkDistance)), result: judgeCorrect())
+                ResultView(navigationPath: $navigationPath, location: searchLocation, time: secondTimer, steps: steps, walkDistance: Int(round(walkDistance)), result: judgeCorrect())
             }
             
             Button(action: {
@@ -174,9 +167,7 @@ struct SeekView: View {
 //                    timerStop()
 //                }
                 timer = "00:00:00"
-                second = 0
-                minute = 0
-                hour = 0
+                secondTimer = 0
                 timerStart()
                 viewDidLoad = false
             }
@@ -197,33 +188,14 @@ struct SeekView: View {
         
         runTimer = true
         timeManager = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: runTimer) {_ in
-            if self.hour == 99 && self.minute == 59 {
-                if self.second == 59 {
-                    timerStop()
-                }
+            
+            secondTimer += 1
+            
+            if secondTimer == 391859 { //99:59:59
+                timerStop()
             }
-            self.second += 1
-            if self.second == 60 {
-                self.second = 0
-                self.minute += 1
-            }
-            if self.minute == 60 {
-                self.minute = 0
-                self.hour += 0
-            }
-            var secondText = String(self.second)
-            var minuteText = String(self.minute)
-            var hourText = String(self.hour)
-            if secondText.count == 1 {
-                secondText = "0" + secondText
-            }
-            if minuteText.count == 1 {
-                minuteText = "0" + minuteText
-            }
-            if hourText.count == 1 {
-                hourText = "0" + hourText
-            }
-            timer = hourText + ":" + minuteText + ":" + secondText
+            
+            timer = manager.tranceSecond(second: secondTimer)
             print(timer)
         }
     }
@@ -292,9 +264,7 @@ struct SeekView: View {
                 return false
             }
         } else {
-            timerStop()
-            pedometer.stopUpdates()
-            return true
+            return false
         }
     }
     

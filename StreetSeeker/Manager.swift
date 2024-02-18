@@ -67,8 +67,35 @@ class Manager {
                 CLLocationCoordinate2D(latitude: bottom, longitude: right)]
 
         
+    
     }
     
+    func tranceSecond(second: Int) -> String {
+        var hour = String(Int(second / 3600))
+        var remain = second % 3600
+        var minute = String(Int(remain / 60))
+        remain = remain % 60
+        var second = String(remain)
+
+        if second.count == 1 {
+            second = "0" + second
+        }
+        if minute.count == 1 {
+            minute = "0" + minute
+        }
+        if hour.count == 1 {
+            hour = "0" + hour
+        }
+        return hour + ":" + minute + ":" + second
+    }
+    
+    func dateToString(date: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "ja_JP")
+        dateFormatter.dateStyle = .medium
+        dateFormatter.dateFormat = "yy/MM/dd"
+        return dateFormatter.string(from: date)
+    }
 }
 
 
@@ -184,5 +211,16 @@ public extension ModelContext {
         
     }
     
+}
+
+
+extension Color {
+    init(hex: UInt, alpha: Double = 1) {
+        self.init(.sRGB,
+                  red: Double((hex >> 16) & 0xff) / 255,
+                  green: Double((hex >> 08) & 0xff) / 255,
+                  blue: Double((hex >> 00) & 0xff) / 255,
+                  opacity: alpha)
+    }
 }
 

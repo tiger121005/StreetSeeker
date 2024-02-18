@@ -21,12 +21,6 @@ struct SettingView: View {
     @ObservedObject var locationManager = LocationManager()
     
     
-//    init() {
-//        let navigationBar = UINavigationBarAppearance()
-//        navigationBar.backgroundColor = .image
-//        navigationBar.titleTextAttributes = [.foregroundColor: UIColor.black]
-//    }
-    
     var body: some View {
         
         let screenSize = UIScreen.main.bounds.size
