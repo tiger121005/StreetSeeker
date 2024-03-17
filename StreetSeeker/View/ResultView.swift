@@ -23,7 +23,6 @@ struct ResultView: View {
     var walkDistance: Int
     var result: Bool
     
-    
     @Environment(\.modelContext) private var modelContext
     
     var body: some View {
