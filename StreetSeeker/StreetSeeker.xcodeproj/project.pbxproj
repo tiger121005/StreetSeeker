@@ -1,0 +1,710 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		19309EDD2B7FAAF90031619F /* DataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19309EDC2B7FAAF90031619F /* DataView.swift */; };
+		194911AC2B7D022800D853D7 /* StreetSeekerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194911AB2B7D022800D853D7 /* StreetSeekerApp.swift */; };
+		194911B02B7D022800D853D7 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194911AF2B7D022800D853D7 /* Item.swift */; };
+		194911B22B7D022A00D853D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 194911B12B7D022A00D853D7 /* Assets.xcassets */; };
+		194911B52B7D022A00D853D7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 194911B42B7D022A00D853D7 /* Preview Assets.xcassets */; };
+		194911BF2B7D022A00D853D7 /* StreetSeekerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194911BE2B7D022A00D853D7 /* StreetSeekerTests.swift */; };
+		194911C92B7D022A00D853D7 /* StreetSeekerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194911C82B7D022A00D853D7 /* StreetSeekerUITests.swift */; };
+		194911CB2B7D022A00D853D7 /* StreetSeekerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194911CA2B7D022A00D853D7 /* StreetSeekerUITestsLaunchTests.swift */; };
+		194911D82B7D025800D853D7 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194911D72B7D025800D853D7 /* StartView.swift */; };
+		194911DA2B7D02B400D853D7 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194911D92B7D02B300D853D7 /* SettingView.swift */; };
+		194911DC2B7D02DF00D853D7 /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194911DB2B7D02DE00D853D7 /* PreviewView.swift */; };
+		194911DE2B7D02FA00D853D7 /* SeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194911DD2B7D02FA00D853D7 /* SeekView.swift */; };
+		194911E02B7D031700D853D7 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194911DF2B7D031700D853D7 /* ResultView.swift */; };
+		194911E22B7D036800D853D7 /* Material.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194911E12B7D036800D853D7 /* Material.swift */; };
+		194911E42B7D038900D853D7 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194911E32B7D038900D853D7 /* Manager.swift */; };
+		194911E62B7D03AC00D853D7 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194911E52B7D03AC00D853D7 /* LocationManager.swift */; };
+		194911EA2B7D045700D853D7 /* RangeUISlider in Frameworks */ = {isa = PBXBuildFile; productRef = 194911E92B7D045700D853D7 /* RangeUISlider */; };
+		194911EE2B7DE42E00D853D7 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194911ED2B7DE42E00D853D7 /* ProfileView.swift */; };
+		194911F02B7DFDBD00D853D7 /* SeekData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194911EF2B7DFDBD00D853D7 /* SeekData.swift */; };
+		194911F32B7E03FF00D853D7 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 194911F22B7E03FF00D853D7 /* CoreMotion.framework */; };
+		197557362B9F051B0020C481 /* EnterRoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197557352B9F051B0020C481 /* EnterRoomView.swift */; };
+		197557382BA31D900020C481 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197557372BA31D900020C481 /* CustomButton.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		194911BB2B7D022A00D853D7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 194911A02B7D022800D853D7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 194911A72B7D022800D853D7;
+			remoteInfo = StreetSeeker;
+		};
+		194911C52B7D022A00D853D7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 194911A02B7D022800D853D7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 194911A72B7D022800D853D7;
+			remoteInfo = StreetSeeker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		19309EDC2B7FAAF90031619F /* DataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataView.swift; sourceTree = "<group>"; };
+		194911A82B7D022800D853D7 /* StreetSeeker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StreetSeeker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		194911AB2B7D022800D853D7 /* StreetSeekerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreetSeekerApp.swift; sourceTree = "<group>"; };
+		194911AF2B7D022800D853D7 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		194911B12B7D022A00D853D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		194911B42B7D022A00D853D7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		194911BA2B7D022A00D853D7 /* StreetSeekerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StreetSeekerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		194911BE2B7D022A00D853D7 /* StreetSeekerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreetSeekerTests.swift; sourceTree = "<group>"; };
+		194911C42B7D022A00D853D7 /* StreetSeekerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StreetSeekerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		194911C82B7D022A00D853D7 /* StreetSeekerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreetSeekerUITests.swift; sourceTree = "<group>"; };
+		194911CA2B7D022A00D853D7 /* StreetSeekerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreetSeekerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		194911D72B7D025800D853D7 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
+		194911D92B7D02B300D853D7 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		194911DB2B7D02DE00D853D7 /* PreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
+		194911DD2B7D02FA00D853D7 /* SeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeekView.swift; sourceTree = "<group>"; };
+		194911DF2B7D031700D853D7 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		194911E12B7D036800D853D7 /* Material.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Material.swift; sourceTree = "<group>"; };
+		194911E32B7D038900D853D7 /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
+		194911E52B7D03AC00D853D7 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		194911ED2B7DE42E00D853D7 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		194911EF2B7DFDBD00D853D7 /* SeekData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeekData.swift; sourceTree = "<group>"; };
+		194911F22B7E03FF00D853D7 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		197557352B9F051B0020C481 /* EnterRoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterRoomView.swift; sourceTree = "<group>"; };
+		197557372BA31D900020C481 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		19B76A802B961D1700B73777 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		194911A52B7D022800D853D7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				194911EA2B7D045700D853D7 /* RangeUISlider in Frameworks */,
+				194911F32B7E03FF00D853D7 /* CoreMotion.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		194911B72B7D022A00D853D7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		194911C12B7D022A00D853D7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1949119F2B7D022800D853D7 = {
+			isa = PBXGroup;
+			children = (
+				194911AA2B7D022800D853D7 /* StreetSeeker */,
+				194911BD2B7D022A00D853D7 /* StreetSeekerTests */,
+				194911C72B7D022A00D853D7 /* StreetSeekerUITests */,
+				194911A92B7D022800D853D7 /* Products */,
+				194911F12B7E03FF00D853D7 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		194911A92B7D022800D853D7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				194911A82B7D022800D853D7 /* StreetSeeker.app */,
+				194911BA2B7D022A00D853D7 /* StreetSeekerTests.xctest */,
+				194911C42B7D022A00D853D7 /* StreetSeekerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		194911AA2B7D022800D853D7 /* StreetSeeker */ = {
+			isa = PBXGroup;
+			children = (
+				19B76A802B961D1700B73777 /* Info.plist */,
+				194911AB2B7D022800D853D7 /* StreetSeekerApp.swift */,
+				194911E72B7D03C900D853D7 /* View */,
+				194911E12B7D036800D853D7 /* Material.swift */,
+				194911E32B7D038900D853D7 /* Manager.swift */,
+				194911E52B7D03AC00D853D7 /* LocationManager.swift */,
+				194911EF2B7DFDBD00D853D7 /* SeekData.swift */,
+				194911AF2B7D022800D853D7 /* Item.swift */,
+				197557372BA31D900020C481 /* CustomButton.swift */,
+				194911B12B7D022A00D853D7 /* Assets.xcassets */,
+				194911B32B7D022A00D853D7 /* Preview Content */,
+			);
+			path = StreetSeeker;
+			sourceTree = "<group>";
+		};
+		194911B32B7D022A00D853D7 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				194911B42B7D022A00D853D7 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		194911BD2B7D022A00D853D7 /* StreetSeekerTests */ = {
+			isa = PBXGroup;
+			children = (
+				194911BE2B7D022A00D853D7 /* StreetSeekerTests.swift */,
+			);
+			path = StreetSeekerTests;
+			sourceTree = "<group>";
+		};
+		194911C72B7D022A00D853D7 /* StreetSeekerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				194911C82B7D022A00D853D7 /* StreetSeekerUITests.swift */,
+				194911CA2B7D022A00D853D7 /* StreetSeekerUITestsLaunchTests.swift */,
+			);
+			path = StreetSeekerUITests;
+			sourceTree = "<group>";
+		};
+		194911E72B7D03C900D853D7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				194911D72B7D025800D853D7 /* StartView.swift */,
+				194911D92B7D02B300D853D7 /* SettingView.swift */,
+				194911DB2B7D02DE00D853D7 /* PreviewView.swift */,
+				194911DD2B7D02FA00D853D7 /* SeekView.swift */,
+				194911DF2B7D031700D853D7 /* ResultView.swift */,
+				197557352B9F051B0020C481 /* EnterRoomView.swift */,
+				194911ED2B7DE42E00D853D7 /* ProfileView.swift */,
+				19309EDC2B7FAAF90031619F /* DataView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		194911F12B7E03FF00D853D7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				194911F22B7E03FF00D853D7 /* CoreMotion.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		194911A72B7D022800D853D7 /* StreetSeeker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 194911CE2B7D022A00D853D7 /* Build configuration list for PBXNativeTarget "StreetSeeker" */;
+			buildPhases = (
+				194911A42B7D022800D853D7 /* Sources */,
+				194911A52B7D022800D853D7 /* Frameworks */,
+				194911A62B7D022800D853D7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StreetSeeker;
+			packageProductDependencies = (
+				194911E92B7D045700D853D7 /* RangeUISlider */,
+			);
+			productName = StreetSeeker;
+			productReference = 194911A82B7D022800D853D7 /* StreetSeeker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		194911B92B7D022A00D853D7 /* StreetSeekerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 194911D12B7D022A00D853D7 /* Build configuration list for PBXNativeTarget "StreetSeekerTests" */;
+			buildPhases = (
+				194911B62B7D022A00D853D7 /* Sources */,
+				194911B72B7D022A00D853D7 /* Frameworks */,
+				194911B82B7D022A00D853D7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				194911BC2B7D022A00D853D7 /* PBXTargetDependency */,
+			);
+			name = StreetSeekerTests;
+			productName = StreetSeekerTests;
+			productReference = 194911BA2B7D022A00D853D7 /* StreetSeekerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		194911C32B7D022A00D853D7 /* StreetSeekerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 194911D42B7D022A00D853D7 /* Build configuration list for PBXNativeTarget "StreetSeekerUITests" */;
+			buildPhases = (
+				194911C02B7D022A00D853D7 /* Sources */,
+				194911C12B7D022A00D853D7 /* Frameworks */,
+				194911C22B7D022A00D853D7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				194911C62B7D022A00D853D7 /* PBXTargetDependency */,
+			);
+			name = StreetSeekerUITests;
+			productName = StreetSeekerUITests;
+			productReference = 194911C42B7D022A00D853D7 /* StreetSeekerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		194911A02B7D022800D853D7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					194911A72B7D022800D853D7 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					194911B92B7D022A00D853D7 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 194911A72B7D022800D853D7;
+					};
+					194911C32B7D022A00D853D7 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 194911A72B7D022800D853D7;
+					};
+				};
+			};
+			buildConfigurationList = 194911A32B7D022800D853D7 /* Build configuration list for PBXProject "StreetSeeker" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1949119F2B7D022800D853D7;
+			packageReferences = (
+				194911E82B7D045700D853D7 /* XCRemoteSwiftPackageReference "RangeUISlider" */,
+			);
+			productRefGroup = 194911A92B7D022800D853D7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				194911A72B7D022800D853D7 /* StreetSeeker */,
+				194911B92B7D022A00D853D7 /* StreetSeekerTests */,
+				194911C32B7D022A00D853D7 /* StreetSeekerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		194911A62B7D022800D853D7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				194911B52B7D022A00D853D7 /* Preview Assets.xcassets in Resources */,
+				194911B22B7D022A00D853D7 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		194911B82B7D022A00D853D7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		194911C22B7D022A00D853D7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		194911A42B7D022800D853D7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				194911E22B7D036800D853D7 /* Material.swift in Sources */,
+				194911DA2B7D02B400D853D7 /* SettingView.swift in Sources */,
+				194911E62B7D03AC00D853D7 /* LocationManager.swift in Sources */,
+				194911B02B7D022800D853D7 /* Item.swift in Sources */,
+				194911EE2B7DE42E00D853D7 /* ProfileView.swift in Sources */,
+				194911AC2B7D022800D853D7 /* StreetSeekerApp.swift in Sources */,
+				197557362B9F051B0020C481 /* EnterRoomView.swift in Sources */,
+				194911D82B7D025800D853D7 /* StartView.swift in Sources */,
+				194911E02B7D031700D853D7 /* ResultView.swift in Sources */,
+				197557382BA31D900020C481 /* CustomButton.swift in Sources */,
+				194911DE2B7D02FA00D853D7 /* SeekView.swift in Sources */,
+				19309EDD2B7FAAF90031619F /* DataView.swift in Sources */,
+				194911F02B7DFDBD00D853D7 /* SeekData.swift in Sources */,
+				194911E42B7D038900D853D7 /* Manager.swift in Sources */,
+				194911DC2B7D02DF00D853D7 /* PreviewView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		194911B62B7D022A00D853D7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				194911BF2B7D022A00D853D7 /* StreetSeekerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		194911C02B7D022A00D853D7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				194911CB2B7D022A00D853D7 /* StreetSeekerUITestsLaunchTests.swift in Sources */,
+				194911C92B7D022A00D853D7 /* StreetSeekerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		194911BC2B7D022A00D853D7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 194911A72B7D022800D853D7 /* StreetSeeker */;
+			targetProxy = 194911BB2B7D022A00D853D7 /* PBXContainerItemProxy */;
+		};
+		194911C62B7D022A00D853D7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 194911A72B7D022800D853D7 /* StreetSeeker */;
+			targetProxy = 194911C52B7D022A00D853D7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		194911CC2B7D022A00D853D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		194911CD2B7D022A00D853D7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		194911CF2B7D022A00D853D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"StreetSeeker/Preview Content\"";
+				DEVELOPMENT_TEAM = 2KUQ5AS45S;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StreetSeeker/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "目的地決定、ゲームクリアの判定のために現在地を取得します。";
+				INFOPLIST_KEY_NSMotionUsageDescription = "アプリ使用中にどれだけ歩いたかを表示するために歩数を取得します。";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.TAIGA.ITO.StreetSeeker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		194911D02B7D022A00D853D7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"StreetSeeker/Preview Content\"";
+				DEVELOPMENT_TEAM = 2KUQ5AS45S;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StreetSeeker/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "目的地決定、ゲームクリアの判定のために現在地を取得します。";
+				INFOPLIST_KEY_NSMotionUsageDescription = "アプリ使用中にどれだけ歩いたかを表示するために歩数を取得します。";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.TAIGA.ITO.StreetSeeker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		194911D22B7D022A00D853D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2KUQ5AS45S;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.Ito.tiger.StreetSeekerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StreetSeeker.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/StreetSeeker";
+			};
+			name = Debug;
+		};
+		194911D32B7D022A00D853D7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2KUQ5AS45S;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.Ito.tiger.StreetSeekerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StreetSeeker.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/StreetSeeker";
+			};
+			name = Release;
+		};
+		194911D52B7D022A00D853D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2KUQ5AS45S;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.Ito.tiger.StreetSeekerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = StreetSeeker;
+			};
+			name = Debug;
+		};
+		194911D62B7D022A00D853D7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2KUQ5AS45S;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.Ito.tiger.StreetSeekerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = StreetSeeker;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		194911A32B7D022800D853D7 /* Build configuration list for PBXProject "StreetSeeker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				194911CC2B7D022A00D853D7 /* Debug */,
+				194911CD2B7D022A00D853D7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		194911CE2B7D022A00D853D7 /* Build configuration list for PBXNativeTarget "StreetSeeker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				194911CF2B7D022A00D853D7 /* Debug */,
+				194911D02B7D022A00D853D7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		194911D12B7D022A00D853D7 /* Build configuration list for PBXNativeTarget "StreetSeekerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				194911D22B7D022A00D853D7 /* Debug */,
+				194911D32B7D022A00D853D7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		194911D42B7D022A00D853D7 /* Build configuration list for PBXNativeTarget "StreetSeekerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				194911D52B7D022A00D853D7 /* Debug */,
+				194911D62B7D022A00D853D7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		194911E82B7D045700D853D7 /* XCRemoteSwiftPackageReference "RangeUISlider" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/chicio/RangeUISlider";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		194911E92B7D045700D853D7 /* RangeUISlider */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 194911E82B7D045700D853D7 /* XCRemoteSwiftPackageReference "RangeUISlider" */;
+			productName = RangeUISlider;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 194911A02B7D022800D853D7 /* Project object */;
+}
