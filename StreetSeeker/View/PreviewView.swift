@@ -26,6 +26,7 @@ struct PreviewView: View {
     @State private var mapPitch: Double = 0.0
     @State private var reloadActive: Bool = false
     @State private var above: Bool = true
+    @State private var showAlert: Bool = false
     
     @Binding var navigationPath: NavigationPath
     
@@ -74,18 +75,15 @@ struct PreviewView: View {
                                 Text("斜め")
                                     .frame(width: 60, height: 40)
                                     .font(.title3)
-                                    .foregroundColor(.text)
-                                    .overlay(RoundedRectangle(cornerRadius: 15)
-                                        .stroke(Color.text, lineWidth: 2))
+                                    
                             } else {
                                 Text("真上")
                                     .frame(width: 60, height: 40)
                                     .font(.title3)
-                                    .foregroundColor(.text)
-                                    .overlay(RoundedRectangle(cornerRadius: 15)
-                                        .stroke(Color.text, lineWidth: 2))
+                                    
                             }
                         })
+                        .buttonStyle(WhiteFrameButton())
                         .padding(.leading, 5)
                         
                         Spacer()
@@ -96,10 +94,9 @@ struct PreviewView: View {
                             Text("回転")
                                 .frame(width: 60, height: 40)
                                 .font(.title3)
-                                .foregroundColor(.text)
-                                .overlay(RoundedRectangle(cornerRadius: 15)
-                                    .stroke(Color.text, lineWidth: 2))
+                                
                         })
+                        .buttonStyle(WhiteFrameButton())
                     }
                     .padding(.trailing, 5)
                     
@@ -124,7 +121,7 @@ struct PreviewView: View {
                         }
                     }
                 
-                
+                    
                 
                 
                 Button(action: {
@@ -132,14 +129,12 @@ struct PreviewView: View {
                 }, label: {
                     Text("探す！")
                         .frame(width: screenWidth / 2, height: 70)
-                        .font(.title3)
+                        .font(.title2)
                 })
                 .navigationDestination(for: pathManager.self) {_ in
                     SeekView(searchLocation: searchLocation, navigationPath: $navigationPath)
                 }
-                .background(.image)
-                .foregroundColor(.black)
-                .cornerRadius(15)
+                .buttonStyle(OriginalButton())
                 .padding(.vertical, 15)
                 
                 
@@ -151,7 +146,16 @@ struct PreviewView: View {
 //                }
             }
         }
+        .alert("現在地を取得できません", isPresented: $showAlert) {
+            Button("OK") {
+                navigationPath.removeLast()
+            }
+        } message: {
+            Text("設定から位置情報の取得がオフになっていないか確認してください")
+        }
+        
         .task {
+            checkAuth()
             searchLocation = manager.randomLocation(distanceRange: distance)
             position = .camera(MapCamera(centerCoordinate: searchLocation,
                                          distance: altitudeBeforeAnimation,
@@ -166,12 +170,22 @@ struct PreviewView: View {
     
     
     //MARK: - Method
+    func checkAuth() {
+        if locationManager.location.coordinate.latitude == 0 && locationManager.location.coordinate.longitude == 0 {
+            showAlert = true
+        }
+    }
     
     func changeLocation(distanceRange: ClosedRange<Double>) {
+        
+        
         searchLocation = manager.randomLocation(distanceRange: distanceRange)
         
         print("searchLocation: ", searchLocation as Any)
-        
+        position = .camera(MapCamera(centerCoordinate: searchLocation,
+                                     distance: altitudeBeforeAnimation,
+                                     heading: 0,
+                                     pitch: 0))
         getSatelliteImage(searchLocation: searchLocation)
         
         zoomin()
@@ -184,7 +198,7 @@ struct PreviewView: View {
         
         position = .camera(MapCamera(centerCoordinate: searchLocation,
                                      distance: altitudeBeforeAnimation,
-                                    pitch: 20))
+                                    pitch: 0))
         mapHeading = 0.0
         print(position)
         
@@ -193,21 +207,6 @@ struct PreviewView: View {
     func changeStyle() {
         mapStyle = .imagery(elevation: .realistic)
     }
-    
-//    func zoomInAnimation() {
-//
-//        var i = 60
-//        Timer.scheduledTimer(withTimeInterval: 1/30, repeats: true) {_ in
-//            while i != 0 {
-//                position = .camera(MapCamera(centerCoordinate: searchLocation,
-//                                             distance: altitudeBeforeAnimation + Double((i * 20)),
-//                                             heading: mapHeading,
-//                                            pitch: mapPitch)
-//                )
-//                i -= 1
-//            }
-//        }
-//    }
     
     func rotateMap() {
         mapHeading += 90
@@ -251,6 +250,7 @@ struct PreviewView: View {
     enum pathManager: String {
         case seek
     }
+    
     
 }
 

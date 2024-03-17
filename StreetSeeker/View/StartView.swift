@@ -15,18 +15,19 @@ struct StartView: View {
 //    private var userData: [UserData]
     
     @State private var navigationPath: NavigationPath = .init()
+    @State private var navigationNum: Int = 0
     
     let userName: String = UserDefaultsKey.userName.get() ?? "no name"
     
     var body: some View {
-        let screenSize = UIScreen.main.bounds.size
-        let screenWidth = screenSize.width
-        
+        let screenWidth = UIScreen.main.bounds.width        
         
         
         NavigationStack(path: $navigationPath) {
             ZStack {
                 Image(.icon)
+                    .resizable()
+                    .scaledToFill()
                 
                 Rectangle()
                     .background(.black)
@@ -39,85 +40,50 @@ struct StartView: View {
                         .padding(.bottom, 80)
                         .shadow(color: .gray, radius: 15)
                     
-                    Button(action: {
-                        navigationPath.append(pathManager.setting)
-                    }, label: {
-                        Text("始める")
-                            .frame(width: screenWidth / 1.5, height: 90)
-                            .font(.title)
-                    })
-//                    NavigationLink("始める", value: pathManager.setting)
-                    .navigationDestination(for: pathManager.self) {_ in
-                        SettingView(navigationPath: $navigationPath)
-                    }
-
-//                    NavigationLink(destination: SettingView()) {
+                    
+                    VStack {
+                        NavigationLink(value: pathManager.setting) {
+                            Text("始める")
+                                .frame(width: screenWidth / 1.5, height: 90)
+                                .font(.title)
+                        }
+                        .buttonStyle(OriginalButton())
+                        .shadow(color: .black, radius: 10)
+                        .padding(10)
                         
-//                    Button(action: {
-//                        transition(value: NavigationManager.setting.rawValue)
-//                    }, label: {
-//                        Text("始める")
-//                            .frame(width: screenWidth / 1.5, height: 90)
-//                            .font(.title)
-//                    })
-                    
-//                    NavigationLink(destination: SettingView(navigationPath: $navigationPath)) {
-//                        Text("始める")
-//                            .frame(width: screenWidth / 1.5, height: 90)
-//                            .font(.title)
-//                    }
-                    
-                    .foregroundColor(.black)
-                    .background(.image)
-                    .cornerRadius(15)
-                    .shadow(color: .black, radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
-                    .padding(10)
-                    
-                                        
-                        
-                    NavigationLink(destination: ProfileView()) {
-                        Text("プロフィール")
-                            .frame(width: screenWidth / 1.5, height: 90)
-                            .font(.title)
-                    }
-//                    Button(action: {
-//                        navigationPath.append(pathManager.profile)
-//                    }, label: {
-//                        Text("プロフィール")
-//                            .frame(width: screenWidth / 1.5, height: 90)
-//                            .font(.title)
-//                    })
-////                    NavigationLink("始める", value: pathManager.setting)
-//                    .navigationDestination(for: pathManager.self) {_ in
-//                        ProfileView()
-//                    }
-                    .foregroundColor(.black)
-                    .background(.image)
-                    .cornerRadius(15)
-                    .shadow(color: .black, radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
-                    .padding(10)
-                    
-                    
-//                    NavigationLink(destination: EnterRoomView()) {
-//                        Text("みんなで")
-//                            .frame(width: screenWidth / 1.5, height: 90)
+//                        NavigationLink(value: pathManager.enterRoomView) {
+//                            Text("友達と")
+//                                .frame(width: screenWidth / 1.5, height: 90)
+//                                .font(.title)
+//                        }
 //                            .foregroundColor(.black)
 //                            .background(.image)
 //                            .cornerRadius(15)
 //                            .shadow(color: .black, radius: 10)
 //                            .padding(10)
-//                    }
-//
-//                    NavigationLink(destination: ProfileView()) {
-//                        Text("プロフィール")
-//                            .frame(width: screenWidth / 1.5, height: 90)
-//                            .foregroundColor(.black)
-//                            .background(.image)
-//                            .cornerRadius(15)
-//                            .shadow(color: .black, radius: 10)
-//
-//                            .padding(10)
-//                    }
+                        
+                        NavigationLink(value: pathManager.profile) {
+                            Text("プロフィール")
+                                .frame(width: screenWidth / 1.5, height: 90)
+                                .font(.title)
+                        }
+                            .foregroundColor(.black)
+                            .background(.image)
+                            .cornerRadius(15)
+                            .shadow(color: .black, radius: 10)
+                            .padding(10)
+                        
+                    }
+                    .navigationDestination(for: pathManager.self) { path in
+                        if path == .setting {
+                            SettingView(navigationPath: $navigationPath)
+                        } else if path == .enterRoomView {
+                            EnterRoomView()
+                        } else if path == .profile {
+                            ProfileView()
+                        }
+                    }
+                    
                     Text("※危険な場所や私有地には入らないでください")
                         .foregroundColor(.black)
                 }
@@ -125,10 +91,8 @@ struct StartView: View {
             
             
         } //NavigationStack
-        .onAppear {
-//            if userData == [] {
-//                
-//            }
+        .task {
+            
         }
         
         
@@ -142,6 +106,7 @@ struct StartView: View {
     
     enum pathManager: String {
         case setting
+        case enterRoomView
         case profile
     }
 }

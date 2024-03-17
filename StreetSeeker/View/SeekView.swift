@@ -38,7 +38,6 @@ struct SeekView: View {
     @State private var timeManager: Timer!
     
     
-    
     var body: some View {
         
         let screenWidth = UIScreen.main.bounds.width
@@ -64,19 +63,13 @@ struct SeekView: View {
                             Text("斜め")
                                 .frame(width: 60, height: 40)
                                 .font(.title3)
-                                .foregroundColor(.text)
-                                .overlay(RoundedRectangle(cornerRadius: 15)
-                                    .stroke(Color.text, lineWidth: 2))
-                                
                         } else {
                             Text("真上")
                                 .frame(width: 60, height: 40)
                                 .font(.title3)
-                                .foregroundColor(.text)
-                                .overlay(RoundedRectangle(cornerRadius: 15)
-                                    .stroke(Color.text, lineWidth: 2))
                         }
                     })
+                    .buttonStyle(WhiteFrameButton())
                     .padding(.leading, 5)
                     
                     Spacer()
@@ -87,10 +80,8 @@ struct SeekView: View {
                         Text("回転")
                             .frame(width: 60, height: 40)
                             .font(.title3)
-                            .foregroundColor(.text)
-                            .overlay(RoundedRectangle(cornerRadius: 15)
-                                .stroke(Color.text, lineWidth: 2))
                     })
+                    .buttonStyle(WhiteFrameButton())
                     .padding(.trailing, 5)
                 }
                 
@@ -125,11 +116,9 @@ struct SeekView: View {
                 Text("ここ！")
                     .font(.title2)
                     .frame(width: screenWidth / 2, height: 70)
-                    .foregroundColor(.black)
-                    .background(.image)
-                    .cornerRadius(15)
                 
             })
+            .buttonStyle(OriginalButton())
             .navigationDestination(for: pathManager.self) {_ in
                 ResultView(navigationPath: $navigationPath, location: searchLocation, time: secondTimer, steps: steps, walkDistance: Int(round(walkDistance)), result: judgeCorrect())
             }
@@ -144,7 +133,7 @@ struct SeekView: View {
             })
             .alert("ギブアップ", isPresented: $showAlert) {
                 Button("キャンセル", role: .cancel) {
-                    showAlert = false
+                    
                 }
                 
                 Button("ギブアップ", role: .destructive) {
@@ -163,15 +152,12 @@ struct SeekView: View {
             if viewDidLoad {
                 steps = 0
                 startCountStep()
-//                if let timeManager {
-//                    timerStop()
-//                }
+                
                 timer = "00:00:00"
                 secondTimer = 0
                 timerStart()
                 viewDidLoad = false
             }
-            
             
         }
         .task {

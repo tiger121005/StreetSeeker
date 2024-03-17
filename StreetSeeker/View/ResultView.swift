@@ -72,11 +72,7 @@ struct ResultView: View {
                             .frame(width: screenWidth / 2, height: 70)
                             .font(.title2)
                     })
-                    .background(.image)
-                    .foregroundColor(.black)
-                    .cornerRadius(15)
-                    //                            .overlay(RoundedRectangle(cornerRadius: 15)
-                    //                                .stroke(Color.black, lineWidth: 0.5))
+                    .buttonStyle(OriginalButton())
                     .padding(.top, 30)
                 }
                 
@@ -112,12 +108,8 @@ struct ResultView: View {
                         Text("もう一度探す")
                             .frame(width: screenWidth / 2, height: 70)
                             .font(.title2)
-                            .foregroundColor(.black)
-                            .background(.image)
-                            .cornerRadius(15)
-//                            .overlay(RoundedRectangle(cornerRadius: 15)
-//                                .stroke(Color.black, lineWidth: 0.5))
                     })
+                    .buttonStyle(OriginalButton())
                     .padding(.top, 70)
                     
                     

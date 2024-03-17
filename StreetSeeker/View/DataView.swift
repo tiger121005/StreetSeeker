@@ -69,7 +69,7 @@ struct DataView: View {
             
             
             let location = CLLocation(latitude: data.latitude, longitude: data.longitude)
-            let geocoder: Void = CLGeocoder().reverseGeocodeLocation(location) { placemarks, error in
+            CLGeocoder().reverseGeocodeLocation(location) { placemarks, error in
                 var administrativeArea = ""
                 var locality = ""
                 var subLocality = ""

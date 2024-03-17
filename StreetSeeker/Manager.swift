@@ -117,7 +117,8 @@ enum NavigationManager: String {
 
 enum UserDefaultsKey: String {
     case userName = "userName"
-    
+    case minDistance = "minDistance"
+    case maxDistance = "maxdistance"
     
     func get() -> String? {
         return UserDefaults.standard.string(forKey: self.rawValue)
@@ -132,7 +133,9 @@ enum UserDefaultsKey: String {
     }
     
     func register() {
-        UserDefaults.standard.register(defaults: ["userName": "no name"])
+        UserDefaults.standard.register(defaults: ["userName": "no name",
+                                                  "minDistance": "500",
+                                                  "maxDistance": "1000"])
     }
 }
 

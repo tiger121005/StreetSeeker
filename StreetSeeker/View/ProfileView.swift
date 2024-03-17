@@ -16,7 +16,7 @@ struct ProfileView: View {
     @State private var allSteps: Int = 0
     @State private var allDistance: Int = 0
     @State private var dataCount: Int = 0
-    @State private var rank: Rank = .biginner
+    @State private var rank: Rank = .beginner
     @State private var alertPresented = false
     @State private var pageSelected: Int = 0
     
@@ -24,17 +24,21 @@ struct ProfileView: View {
     //MARK: - View
     
     var body: some View {
+        let screenWidth = UIScreen.main.bounds.width
+        
         VStack {
             nameCard()
-            
+                .frame(width: screenWidth * 0.9)
             
             TabView(selection: $pageSelected) {
                 if seekData.count != 0 {
                     ForEach(devidedData, id: \.self) { value in
                         stampView(value: value)
+                            .frame(width: screenWidth * 0.95)
                     }
                 } else {
                     stampView(value: [])
+                        .frame(width: screenWidth * 0.95)
                 }
                 
             }
@@ -84,15 +88,15 @@ struct ProfileView: View {
             
             dataCount = seekData.count
             
-            if dataCount < 10 {
-                rank = .biginner
-            } else if dataCount < 20 {
+            if dataCount < Int(Rank.beginner.nextBorder)! {
+                rank = .beginner
+            } else if dataCount < Int(Rank.bronze.nextBorder)! {
                 rank = .bronze
-            } else if dataCount < 40 {
+            } else if dataCount < Int(Rank.silver.nextBorder)! {
                 rank = .silver
-            } else if dataCount < 60 {
+            } else if dataCount < Int(Rank.gold.nextBorder)! {
                 rank = .gold
-            } else  {
+            } else {
                 rank = .platinum
             }
             
@@ -152,7 +156,7 @@ struct ProfileView: View {
             }
         }
         .aspectRatio(2 / 1, contentMode: .fit)
-        .padding(20)
+        
         
     }
         
@@ -163,7 +167,6 @@ struct ProfileView: View {
             Rectangle()
                 .foregroundColor(.text)
                 .cornerRadius(20)
-                .padding(.horizontal, 7)
             
             VStack {
                 Grid() {
@@ -221,7 +224,7 @@ struct ProfileView: View {
                         }
                     }
                 }
-                .padding(.horizontal, 30)
+                .padding(.horizontal, 20)
                 .padding(.top, 10)
                 
                 HStack {
@@ -244,7 +247,7 @@ struct ProfileView: View {
         case gold = "Gold"
         case silver = "Silver"
         case bronze = "Bronze"
-        case biginner = "Biginner"
+        case beginner = "Beginner"
         
         var color: [Color] {
             switch self {
@@ -276,7 +279,7 @@ struct ProfileView: View {
                         Color(hex: 0x895E1A),
                         Color(hex: 0x804A00),
                         Color(hex: 0xB08D57)]
-            case .biginner:
+            case .beginner:
                 return [.image]
             }
         }
@@ -292,7 +295,7 @@ struct ProfileView: View {
                 return .white
             case .bronze:
                 return .white
-            case .biginner:
+            case .beginner:
                 return .black
             }
         }
@@ -307,7 +310,7 @@ struct ProfileView: View {
                 return "40"
             case .bronze:
                 return "20"
-            case .biginner:
+            case .beginner:
                 return "10"
             }
         }

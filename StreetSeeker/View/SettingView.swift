@@ -81,7 +81,7 @@ struct SettingView: View {
                 }
                 
                 Button(action: {
-                    navigationPath.append(pathManager.previewView)
+                    goPreview()
                 }, label: {
                     Text("画像を表示")
                         .frame(width: screenWidth / 2, height: 70)
@@ -90,27 +90,27 @@ struct SettingView: View {
                 .navigationDestination(for: pathManager.self) {_ in
                     PreviewView(distance: Double(currentMinValue)...Double(currentMaxValue), navigationPath: $navigationPath)
                 }
-//                NavigationLink(destination: PreviewView(distance: Double(currentMinValue)...Double(currentMaxValue), navigationPath: $navigationPath)) {
-//                    Text("画像を表示")
-//                        .frame(width: screenWidth / 2, height: 70)
-//                        .font(.title)
-//                }
-                .background(.image)
-                .foregroundColor(.black)
-                .cornerRadius(15)
+                .buttonStyle(OriginalButton())
                 .padding(.top, 300)
                 
             }
-        
+            .onAppear() {
+                currentMinValue = CGFloat(Int(UserDefaultsKey.minDistance.get() ?? "500") ?? 500)
+                currentMaxValue = CGFloat(Int(UserDefaultsKey.maxDistance.get() ?? "1000") ?? 1000)
+            }
             
-            
-//        }
     }
     
     
     private func transition(value: String) {
         navigationPath.append(value)
         print(navigationPath)
+    }
+    
+    private func goPreview() {
+        UserDefaultsKey.minDistance.set(value: String(Int(currentMinValue)))
+        UserDefaultsKey.maxDistance.set(value: String(Int(currentMaxValue)))
+        navigationPath.append(pathManager.previewView)
     }
     
     enum pathManager: String {
