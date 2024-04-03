@@ -30,3 +30,8 @@ extension UIImage {
 extension CLLocationCoordinate2D {
     static let defaultLocation = CLLocationCoordinate2D(latitude: 135, longitude: 35)
 }
+
+enum SliderName {
+    case min
+    case max
+}

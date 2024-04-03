@@ -18,8 +18,59 @@ class Manager {
     
     static var shared = Manager()
     
+    @Query private var seekData: [SeekData]
+    
     @ObservedObject var locationManager = LocationManager()
     
+    
+    var rank: Rank {
+        let ranks: [Rank] = [.beginner, .bronze, .silver, .gold]
+        for r in ranks {
+            if seekData.count < Int(r.nextBorder)! {
+                return r
+            }
+        }
+        
+        return .platinum
+    }
+    
+    var devidedData: [[SeekData]]{
+        var datas: [[SeekData]] = []
+        
+        let sortedData = seekData.sorted { $0.date < $1.date }
+        
+        var data = sortedData
+        
+        while data.count != 0 {
+            if data.count < 10 {
+                datas.append(data)
+                data = []
+            } else {
+                let ten = Array(data.prefix(10))
+                data.removeSubrange(0...9)
+                datas.append(ten)
+            }
+        }
+        datas.reverse()
+        
+        return datas
+    }
+    
+    var steps: Int {
+        var step = 0
+        for data in seekData {
+            step += data.steps
+        }
+        return step
+    }
+    
+    var distance: Int {
+        var dis = 0
+        for data in seekData {
+            dis += data.distance
+        }
+        return dis
+    }
     
     func meterPerLongitudeDegrees(latitude: Double) -> Double {
         let l = 6376136.0
@@ -96,6 +147,8 @@ class Manager {
         dateFormatter.dateFormat = "yy/MM/dd"
         return dateFormatter.string(from: date)
     }
+    
+    
 }
 
 
@@ -136,6 +189,83 @@ enum UserDefaultsKey: String {
         UserDefaults.standard.register(defaults: ["userName": "no name",
                                                   "minDistance": "500",
                                                   "maxDistance": "1000"])
+    }
+}
+
+
+//MARK: - Rank
+
+enum Rank: String {
+    case platinum = "Platinum"
+    case gold = "Gold"
+    case silver = "Silver"
+    case bronze = "Bronze"
+    case beginner = "Beginner"
+    
+    var color: [Color] {
+        switch self {
+        case .platinum:
+            return [Color(hex: 0xff6161),
+                    Color(hex: 0xe9b22d),
+                    Color(hex: 0xc0ca4b),
+                    Color(hex: 0x35b338),
+                    Color(hex: 0x566ef3),
+                    Color(hex: 0x9a27ee)]
+        case .gold:
+            return [Color(hex: 0xDBB400),
+                    Color(hex: 0xEFAF00),
+                    Color(hex: 0xF5D100),
+                    Color(hex: 0xE0CA82),
+                    Color(hex: 0xD1AE15),
+                    Color(hex: 0xDBB400)]
+        case .silver:
+            return [Color(hex: 0x70706F),
+                    Color(hex: 0x7D7D7A),
+                    Color(hex: 0xB3B6B5),
+                    Color(hex: 0x8E8D8D),
+                    Color(hex: 0xB3B6B5),
+                    Color(hex: 0xA1A2A3)]
+        case .bronze:
+            return [Color(hex: 0x804A00),
+                    Color(hex: 0x9C7A3C),
+                    Color(hex: 0xB08D57),
+                    Color(hex: 0x895E1A),
+                    Color(hex: 0x804A00),
+                    Color(hex: 0xB08D57)]
+        case .beginner:
+            return [.image]
+        }
+    }
+    
+    var textColor: Color {
+        switch self {
+            
+        case .platinum:
+            return .black
+        case .gold:
+            return .black
+        case .silver:
+            return .white
+        case .bronze:
+            return .white
+        case .beginner:
+            return .black
+        }
+    }
+    
+    var nextBorder: String {
+        switch self {
+        case .platinum:
+            return "max"
+        case .gold:
+            return "60"
+        case .silver:
+            return "40"
+        case .bronze:
+            return "20"
+        case .beginner:
+            return "10"
+        }
     }
 }
 

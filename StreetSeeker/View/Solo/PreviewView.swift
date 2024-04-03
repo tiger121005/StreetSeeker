@@ -137,13 +137,6 @@ struct PreviewView: View {
                 .buttonStyle(OriginalButton())
                 .padding(.vertical, 15)
                 
-                
-//                NavigationLink(destination: SeekView(searchLocation: searchLocation, navigationPath: $navigationPath)) {
-//                    Text("ここを探す")
-//                        .frame(width: screenWidth / 2, height: 70)
-//                        .foregroundColor(.black)
-//
-//                }
             }
         }
         .alert("現在地を取得できません", isPresented: $showAlert) {

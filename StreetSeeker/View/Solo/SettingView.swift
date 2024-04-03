@@ -11,8 +11,11 @@ import RangeUISlider
 import MapKit
 
 struct SettingView: View {
-    @State private var currentMinValue: CGFloat = 250
-    @State private var currentMaxValue: CGFloat = 750
+    
+    let manager = SliderManager.shared
+    
+    @State private var minValue: Int = 2
+    @State private var maxValue: Int = 15
     
     @State private var segue = false
     
@@ -20,6 +23,7 @@ struct SettingView: View {
     
     @ObservedObject var locationManager = LocationManager()
     
+    @State private var position: MapCameraPosition = .automatic
     
     var body: some View {
         
@@ -29,8 +33,8 @@ struct SettingView: View {
 //        NavigationStack(path: $navigationPath) {
             VStack {
                 Text("探す範囲を指定しよう！")
-                    .padding(.bottom, 20)
-                    .font(.title2)
+                    .padding(.bottom, 40)
+                    .font(.title)
                     .navigationTitle("設定")
                     .navigationBarTitleDisplayMode(.inline)
                     .toolbarBackground(.image, for: .navigationBar)
@@ -38,47 +42,41 @@ struct SettingView: View {
                     .toolbarColorScheme(.light, for: .navigationBar)
                 
                 HStack {
-                    Text(String(Int(currentMinValue)))
-                        .font(.title3)
+                    Text(String(manager.value(value: minValue)))
+                        .font(.title)
+//                        .fontWeight(.bold)
                     Text(" ~ ")
-                    Text(String(Int(currentMaxValue)))
-                        .font(.title3)
+                    Text(String(manager.value(value: maxValue)))
+                        .font(.title)
+//                        .fontWeight(.bold)
                     
                     Text("m")
                     
                 }
                 
-                
-                RangeSlider(minValueSelected: $currentMinValue, maxValueSelected: $currentMaxValue)
-                
-                    .scaleMinValue(250)
-                    .scaleMaxValue(5000)
-                    .rangeSelectedColor(.image)
-                    .rangeNotSelectedColor(.secondary)
-                    .barHeight(4)
-                    .stepIncrement(250)
-                    .defaultValueLeftKnob(250)
-                    .defaultValueRightKnob(750)
-                    .leftKnobColor(Color.text)
-                    .leftKnobWidth(25)
-                    .leftKnobHeight(25)
-                    .leftKnobCorners(12.5)
-                    .rightKnobColor(Color.text)
-                    .rightKnobWidth(25)
-                    .rightKnobHeight(25)
-                    .rightKnobCorners(12.5)
-                    .frame(height: 20)
-                    .padding(.horizontal, 50)
+                CustomSlider(minValue: $minValue, maxValue: $maxValue)
+                    .padding(30)
+                    .frame(height: 30)
                 
                 HStack {
-                    Text("250m")
+                    Text("500m")
                         .font(.title3)
-                        .padding(.leading, 50)
+                        .padding(.leading, 10)
                     Spacer()
                     Text("5000m")
                         .font(.title3)
-                        .padding(.trailing, 50)
+                        .padding(.trailing, 10)
                 }
+                
+                Map(interactionModes: []) {
+                    MapCircle(center: locationManager.location.coordinate, radius: CLLocationDistance(manager.value(value: maxValue)))
+                        .foregroundStyle(.image.opacity(0.3))
+                    MapCircle(center: locationManager.location.coordinate, radius: CLLocationDistance(manager.value(value: minValue)))
+                        .foregroundStyle(.image.opacity(1))
+                }
+                    .frame(height: 300)
+                    
+                
                 
                 Button(action: {
                     goPreview()
@@ -88,15 +86,20 @@ struct SettingView: View {
                         .font(.title2)
                 })
                 .navigationDestination(for: pathManager.self) {_ in
-                    PreviewView(distance: Double(currentMinValue)...Double(currentMaxValue), navigationPath: $navigationPath)
+                    PreviewView(distance: Double(manager.value(value: minValue))...Double(manager.value(value: maxValue)), navigationPath: $navigationPath)
                 }
                 .buttonStyle(OriginalButton())
-                .padding(.top, 300)
+//                .padding(.top, 300)
                 
             }
             .onAppear() {
-                currentMinValue = CGFloat(Int(UserDefaultsKey.minDistance.get() ?? "500") ?? 500)
-                currentMaxValue = CGFloat(Int(UserDefaultsKey.maxDistance.get() ?? "1000") ?? 1000)
+                minValue = Int(UserDefaultsKey.minDistance.get() ?? "2") ?? 2
+                maxValue = Int(UserDefaultsKey.maxDistance.get() ?? "15") ?? 15
+                
+                //UserDefaultsで前の値が保存されてい場合
+                if maxValue >= 100 {
+                    maxValue = 15
+                }
             }
             
     }
@@ -108,8 +111,8 @@ struct SettingView: View {
     }
     
     private func goPreview() {
-        UserDefaultsKey.minDistance.set(value: String(Int(currentMinValue)))
-        UserDefaultsKey.maxDistance.set(value: String(Int(currentMaxValue)))
+        UserDefaultsKey.minDistance.set(value: String(minValue))
+        UserDefaultsKey.maxDistance.set(value: String(maxValue))
         navigationPath.append(pathManager.previewView)
     }
     

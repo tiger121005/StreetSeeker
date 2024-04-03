@@ -51,16 +51,16 @@ struct StartView: View {
                         .shadow(color: .black, radius: 10)
                         .padding(10)
                         
-//                        NavigationLink(value: pathManager.enterRoomView) {
-//                            Text("友達と")
-//                                .frame(width: screenWidth / 1.5, height: 90)
-//                                .font(.title)
-//                        }
-//                            .foregroundColor(.black)
-//                            .background(.image)
-//                            .cornerRadius(15)
-//                            .shadow(color: .black, radius: 10)
-//                            .padding(10)
+                        NavigationLink(value: pathManager.enterRoomView) {
+                            Text("友達と")
+                                .frame(width: screenWidth / 1.5, height: 90)
+                                .font(.title)
+                        }
+                            .foregroundColor(.black)
+                            .background(.image)
+                            .cornerRadius(15)
+                            .shadow(color: .black, radius: 10)
+                            .padding(10)
                         
                         NavigationLink(value: pathManager.profile) {
                             Text("プロフィール")
@@ -113,5 +113,4 @@ struct StartView: View {
 
 #Preview {
     StartView()
-//        .modelContainer(for: SeekData.self, inMemory: true)
 }

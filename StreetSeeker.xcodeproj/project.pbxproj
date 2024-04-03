@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		19309EDD2B7FAAF90031619F /* DataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19309EDC2B7FAAF90031619F /* DataView.swift */; };
 		194911AC2B7D022800D853D7 /* StreetSeekerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194911AB2B7D022800D853D7 /* StreetSeekerApp.swift */; };
-		194911B02B7D022800D853D7 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194911AF2B7D022800D853D7 /* Item.swift */; };
 		194911B22B7D022A00D853D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 194911B12B7D022A00D853D7 /* Assets.xcassets */; };
 		194911B52B7D022A00D853D7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 194911B42B7D022A00D853D7 /* Preview Assets.xcassets */; };
 		194911BF2B7D022A00D853D7 /* StreetSeekerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194911BE2B7D022A00D853D7 /* StreetSeekerTests.swift */; };
@@ -29,6 +28,21 @@
 		194911F32B7E03FF00D853D7 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 194911F22B7E03FF00D853D7 /* CoreMotion.framework */; };
 		197557362B9F051B0020C481 /* EnterRoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197557352B9F051B0020C481 /* EnterRoomView.swift */; };
 		197557382BA31D900020C481 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197557372BA31D900020C481 /* CustomButton.swift */; };
+		198437EB2BAFE56000DD767B /* NameCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198437EA2BAFE56000DD767B /* NameCard.swift */; };
+		198437ED2BAFED3700DD767B /* StampView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198437EC2BAFED3700DD767B /* StampView.swift */; };
+		198437EF2BB0016400DD767B /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198437EE2BB0016400DD767B /* DataManager.swift */; };
+		198437F12BB0039800DD767B /* CustomText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198437F02BB0039800DD767B /* CustomText.swift */; };
+		198437F32BB008ED00DD767B /* CustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198437F22BB008ED00DD767B /* CustomSlider.swift */; };
+		19AA13732BAC75FB00FB5E1B /* CreateRoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AA13722BAC75FB00FB5E1B /* CreateRoomView.swift */; };
+		19AA13752BAC763900FB5E1B /* WaitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AA13742BAC763900FB5E1B /* WaitView.swift */; };
+		19AA13772BAC766A00FB5E1B /* GroupStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AA13762BAC766A00FB5E1B /* GroupStartView.swift */; };
+		19AA13792BAC76AA00FB5E1B /* GroupPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AA13782BAC76AA00FB5E1B /* GroupPreviewView.swift */; };
+		19AA137B2BAC76E600FB5E1B /* GroupSeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AA137A2BAC76E600FB5E1B /* GroupSeekView.swift */; };
+		19AA137D2BAC771000FB5E1B /* LogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AA137C2BAC771000FB5E1B /* LogView.swift */; };
+		19AA137F2BAC774C00FB5E1B /* GroupClearView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AA137E2BAC774C00FB5E1B /* GroupClearView.swift */; };
+		19AA13812BAC777B00FB5E1B /* GroupMissView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AA13802BAC777B00FB5E1B /* GroupMissView.swift */; };
+		19AA13832BAC77AA00FB5E1B /* RankingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AA13822BAC77AA00FB5E1B /* RankingView.swift */; };
+		19B49B2F2BB870A3004FA3EE /* SliderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B49B2E2BB870A2004FA3EE /* SliderManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +66,6 @@
 		19309EDC2B7FAAF90031619F /* DataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataView.swift; sourceTree = "<group>"; };
 		194911A82B7D022800D853D7 /* StreetSeeker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StreetSeeker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		194911AB2B7D022800D853D7 /* StreetSeekerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreetSeekerApp.swift; sourceTree = "<group>"; };
-		194911AF2B7D022800D853D7 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		194911B12B7D022A00D853D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		194911B42B7D022A00D853D7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		194911BA2B7D022A00D853D7 /* StreetSeekerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StreetSeekerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,6 +86,21 @@
 		194911F22B7E03FF00D853D7 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		197557352B9F051B0020C481 /* EnterRoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterRoomView.swift; sourceTree = "<group>"; };
 		197557372BA31D900020C481 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		198437EA2BAFE56000DD767B /* NameCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameCard.swift; sourceTree = "<group>"; };
+		198437EC2BAFED3700DD767B /* StampView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampView.swift; sourceTree = "<group>"; };
+		198437EE2BB0016400DD767B /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		198437F02BB0039800DD767B /* CustomText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomText.swift; sourceTree = "<group>"; };
+		198437F22BB008ED00DD767B /* CustomSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSlider.swift; sourceTree = "<group>"; };
+		19AA13722BAC75FB00FB5E1B /* CreateRoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomView.swift; sourceTree = "<group>"; };
+		19AA13742BAC763900FB5E1B /* WaitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitView.swift; sourceTree = "<group>"; };
+		19AA13762BAC766A00FB5E1B /* GroupStartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupStartView.swift; sourceTree = "<group>"; };
+		19AA13782BAC76AA00FB5E1B /* GroupPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupPreviewView.swift; sourceTree = "<group>"; };
+		19AA137A2BAC76E600FB5E1B /* GroupSeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupSeekView.swift; sourceTree = "<group>"; };
+		19AA137C2BAC771000FB5E1B /* LogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogView.swift; sourceTree = "<group>"; };
+		19AA137E2BAC774C00FB5E1B /* GroupClearView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupClearView.swift; sourceTree = "<group>"; };
+		19AA13802BAC777B00FB5E1B /* GroupMissView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupMissView.swift; sourceTree = "<group>"; };
+		19AA13822BAC77AA00FB5E1B /* RankingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingView.swift; sourceTree = "<group>"; };
+		19B49B2E2BB870A2004FA3EE /* SliderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderManager.swift; sourceTree = "<group>"; };
 		19B76A802B961D1700B73777 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -129,13 +157,8 @@
 			children = (
 				19B76A802B961D1700B73777 /* Info.plist */,
 				194911AB2B7D022800D853D7 /* StreetSeekerApp.swift */,
-				194911E72B7D03C900D853D7 /* View */,
-				194911E12B7D036800D853D7 /* Material.swift */,
-				194911E32B7D038900D853D7 /* Manager.swift */,
-				194911E52B7D03AC00D853D7 /* LocationManager.swift */,
-				194911EF2B7DFDBD00D853D7 /* SeekData.swift */,
-				194911AF2B7D022800D853D7 /* Item.swift */,
-				197557372BA31D900020C481 /* CustomButton.swift */,
+				198437E82BAF4BFB00DD767B /* View */,
+				198437E92BAF4C2800DD767B /* Model */,
 				194911B12B7D022A00D853D7 /* Assets.xcassets */,
 				194911B32B7D022A00D853D7 /* Preview Content */,
 			);
@@ -167,27 +190,86 @@
 			path = StreetSeekerUITests;
 			sourceTree = "<group>";
 		};
-		194911E72B7D03C900D853D7 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				194911D72B7D025800D853D7 /* StartView.swift */,
-				194911D92B7D02B300D853D7 /* SettingView.swift */,
-				194911DB2B7D02DE00D853D7 /* PreviewView.swift */,
-				194911DD2B7D02FA00D853D7 /* SeekView.swift */,
-				194911DF2B7D031700D853D7 /* ResultView.swift */,
-				197557352B9F051B0020C481 /* EnterRoomView.swift */,
-				194911ED2B7DE42E00D853D7 /* ProfileView.swift */,
-				19309EDC2B7FAAF90031619F /* DataView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		194911F12B7E03FF00D853D7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				194911F22B7E03FF00D853D7 /* CoreMotion.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		198437E82BAF4BFB00DD767B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				194911D72B7D025800D853D7 /* StartView.swift */,
+				19AA13852BAC77FE00FB5E1B /* Solo */,
+				19AA13862BAC781D00FB5E1B /* Group */,
+				19AA13842BAC77D200FB5E1B /* Profile */,
+				19B49B302BB8763B004FA3EE /* CustomView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		198437E92BAF4C2800DD767B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				194911E12B7D036800D853D7 /* Material.swift */,
+				194911E32B7D038900D853D7 /* Manager.swift */,
+				194911E52B7D03AC00D853D7 /* LocationManager.swift */,
+				198437EE2BB0016400DD767B /* DataManager.swift */,
+				194911EF2B7DFDBD00D853D7 /* SeekData.swift */,
+				19B49B2E2BB870A2004FA3EE /* SliderManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		19AA13842BAC77D200FB5E1B /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				194911ED2B7DE42E00D853D7 /* ProfileView.swift */,
+				19309EDC2B7FAAF90031619F /* DataView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		19AA13852BAC77FE00FB5E1B /* Solo */ = {
+			isa = PBXGroup;
+			children = (
+				194911D92B7D02B300D853D7 /* SettingView.swift */,
+				194911DB2B7D02DE00D853D7 /* PreviewView.swift */,
+				194911DD2B7D02FA00D853D7 /* SeekView.swift */,
+				194911DF2B7D031700D853D7 /* ResultView.swift */,
+			);
+			path = Solo;
+			sourceTree = "<group>";
+		};
+		19AA13862BAC781D00FB5E1B /* Group */ = {
+			isa = PBXGroup;
+			children = (
+				197557352B9F051B0020C481 /* EnterRoomView.swift */,
+				19AA13722BAC75FB00FB5E1B /* CreateRoomView.swift */,
+				19AA13742BAC763900FB5E1B /* WaitView.swift */,
+				19AA13762BAC766A00FB5E1B /* GroupStartView.swift */,
+				19AA13782BAC76AA00FB5E1B /* GroupPreviewView.swift */,
+				19AA137A2BAC76E600FB5E1B /* GroupSeekView.swift */,
+				19AA137C2BAC771000FB5E1B /* LogView.swift */,
+				19AA137E2BAC774C00FB5E1B /* GroupClearView.swift */,
+				19AA13802BAC777B00FB5E1B /* GroupMissView.swift */,
+				19AA13822BAC77AA00FB5E1B /* RankingView.swift */,
+			);
+			path = Group;
+			sourceTree = "<group>";
+		};
+		19B49B302BB8763B004FA3EE /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				197557372BA31D900020C481 /* CustomButton.swift */,
+				198437F02BB0039800DD767B /* CustomText.swift */,
+				198437F22BB008ED00DD767B /* CustomSlider.swift */,
+				198437EA2BAFE56000DD767B /* NameCard.swift */,
+				198437EC2BAFED3700DD767B /* StampView.swift */,
+			);
+			path = CustomView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,20 +409,34 @@
 			buildActionMask = 2147483647;
 			files = (
 				194911E22B7D036800D853D7 /* Material.swift in Sources */,
+				19AA13832BAC77AA00FB5E1B /* RankingView.swift in Sources */,
 				194911DA2B7D02B400D853D7 /* SettingView.swift in Sources */,
 				194911E62B7D03AC00D853D7 /* LocationManager.swift in Sources */,
-				194911B02B7D022800D853D7 /* Item.swift in Sources */,
+				19AA13752BAC763900FB5E1B /* WaitView.swift in Sources */,
+				19B49B2F2BB870A3004FA3EE /* SliderManager.swift in Sources */,
 				194911EE2B7DE42E00D853D7 /* ProfileView.swift in Sources */,
+				19AA137F2BAC774C00FB5E1B /* GroupClearView.swift in Sources */,
 				194911AC2B7D022800D853D7 /* StreetSeekerApp.swift in Sources */,
+				198437F12BB0039800DD767B /* CustomText.swift in Sources */,
+				198437ED2BAFED3700DD767B /* StampView.swift in Sources */,
 				197557362B9F051B0020C481 /* EnterRoomView.swift in Sources */,
 				194911D82B7D025800D853D7 /* StartView.swift in Sources */,
+				198437EF2BB0016400DD767B /* DataManager.swift in Sources */,
 				194911E02B7D031700D853D7 /* ResultView.swift in Sources */,
 				197557382BA31D900020C481 /* CustomButton.swift in Sources */,
+				198437F32BB008ED00DD767B /* CustomSlider.swift in Sources */,
 				194911DE2B7D02FA00D853D7 /* SeekView.swift in Sources */,
+				19AA13732BAC75FB00FB5E1B /* CreateRoomView.swift in Sources */,
+				19AA13812BAC777B00FB5E1B /* GroupMissView.swift in Sources */,
+				19AA137D2BAC771000FB5E1B /* LogView.swift in Sources */,
 				19309EDD2B7FAAF90031619F /* DataView.swift in Sources */,
 				194911F02B7DFDBD00D853D7 /* SeekData.swift in Sources */,
 				194911E42B7D038900D853D7 /* Manager.swift in Sources */,
+				19AA13792BAC76AA00FB5E1B /* GroupPreviewView.swift in Sources */,
+				198437EB2BAFE56000DD767B /* NameCard.swift in Sources */,
 				194911DC2B7D02DF00D853D7 /* PreviewView.swift in Sources */,
+				19AA137B2BAC76E600FB5E1B /* GroupSeekView.swift in Sources */,
+				19AA13772BAC766A00FB5E1B /* GroupStartView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

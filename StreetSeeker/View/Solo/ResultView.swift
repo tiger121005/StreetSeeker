@@ -55,9 +55,9 @@ struct ResultView: View {
                             }
                         }
                     
-                    dataText(text: "タイム: \(manager.tranceSecond(second: time))")
-                    dataText(text: "歩数: \(steps)")
-                    dataText(text: "距離: \(walkDistance)m")
+                    DataText(text: "タイム: \(manager.tranceSecond(second: time))")
+                    DataText(text: "歩数: \(steps)")
+                    DataText(text: "距離: \(walkDistance)m")
                         .padding(.bottom, 10)
                     
                     
@@ -132,13 +132,6 @@ struct ResultView: View {
         } catch {
             print("Error save")
         }
-    }
-    
-    func dataText(text: String) -> some View {
-        Text(text)
-            .foregroundStyle(.white)
-            .font(.largeTitle)
-            .fontWeight(.bold)
     }
 
         

@@ -13,9 +13,10 @@ struct StreetSeekerApp: App {
 
     var body: some Scene {
         WindowGroup {
-            StartView()
-            
+            SliderTestView()
+
         }
         .modelContainer(for: SeekData.self)
+        
     }
 }

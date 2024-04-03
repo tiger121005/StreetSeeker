@@ -11,6 +11,7 @@ struct EnterRoomView: View {
     
     var body: some View {
         Text("EnrerRoomView")
+        
     }
     
 }
